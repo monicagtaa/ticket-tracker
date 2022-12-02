@@ -1,0 +1,51 @@
+@use "./assets/sass/_variables.scss" as *;
+
+* {
+  // font-size: 24px;
+  border-radius: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: $color-green;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: $color-black;
+}
+
+.app {
+  border: 5px solid $color-neon-red;
+  padding: 20px;
+  margin: 40px;
+  width: fit-content;
+  background-color: $color-green;
+}
+
+.app__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  background-color: $color-green;
+}
+
+.app__title {
+  text-align: center;
+  background-color: $color-green;
+  color: $color-neon-red;
+  margin: 0px 0px 20px 0px;
+}
+@media screen and (max-width: 800px) {
+  * {
+    // font-size: 24px;
+    border-radius: 20px;
+  }
+
+  .app {
+    margin: 20px;
+  }
+  .app__title {
+    text-align: center;
+  }
+  .app__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
